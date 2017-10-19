@@ -1,0 +1,18 @@
+<h1>Welcome, <%= @user.username %>!</h1>
+
+
+<h3><%= @user.username %>'s Answers:</h3>
+<ul>
+  <% @user.answers.each do |answer| %>
+    <li><%= answer.answer_body %></li>
+  <% end %>
+</ul>
+
+<h3><%= @user.username %>'s Questions:</h3>
+<ul>
+  <% @user.questions.each do |question| %>
+    <li><%= question.title %></li>
+    <li><%= question.question_body %></li>
+  <% end %>
+</ul>
+
