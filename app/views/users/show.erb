@@ -1,18 +1,19 @@
-<h1>Welcome, <%= @user.username %>!</h1>
+<h1>Welcome, <%= @user.username.capitalize %>!</h1>
 
 
-<h3><%= @user.username %>'s Answers:</h3>
+<h3><%= @user.username.capitalize %>'s Answers:</h3>
 <ul>
   <% @user.answers.each do |answer| %>
     <li><%= answer.answer_body %></li>
   <% end %>
 </ul>
 
-<h3><%= @user.username %>'s Questions:</h3>
+<h3><%= @user.username.capitalize %>'s Questions:</h3>
 <ul>
   <% @user.questions.each do |question| %>
-    <li><%= question.title %></li>
-    <li><%= question.question_body %></li>
+    <dt><b>Title:</b> <%= question.title %></dt>
+    <dd><b>Question:</b> <%= question.question_body %></dd>
+    <br><br>
   <% end %>
 </ul>
 
