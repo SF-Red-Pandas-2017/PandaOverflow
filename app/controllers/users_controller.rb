@@ -1,15 +1,16 @@
 get '/users/new' do
   @user = User.new
-  erb :'index'
+  erb :'users/new'
 end
 
 post '/users' do
   @user = User.new(params[:user])
   if @user.save
+    session[:id] = @user.id
     redirect "/users/#{@user.id}"
   else
-    @errors = @user.errors.full_messages
-    erb :'index'
+    @errors = user.errors.full_messages
+    erb :'users/new'
   end
 end
 
@@ -18,6 +19,6 @@ get '/users/:id'  do
   if current_user == @user
     erb :'users/show'
   else
-    erb :'index'
+    erb :'users/new'
   end
 end
