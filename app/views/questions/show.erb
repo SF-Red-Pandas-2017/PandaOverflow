@@ -1,0 +1,29 @@
+<div class="question_container">
+  <h1> <%= @question.title %></h1>
+  <h2> <%= @question.question_body %></h2>
+  <p>
+    <div class="votes_container">
+      <form action="question/<%= @question.id %>/votes" method="post">
+        <button name="up_vote" type="submit" value="1">+</button>
+      </form>
+      <form action="question/<%= @question.id %>/votes" method="post">
+        <button name="down_vote" type="submit" value="-1">-</button>
+        <span>votes: <%= @question.object_votes %></span>
+      </form>
+    </div>
+    <a href="/questions/<%= @question.id %>/comments">Comments</a>
+
+    </p>
+    <div class="answers_container">
+      <ul>
+      <% @question.answers.each do |answer| %>
+        <li> <%= answer %> </li>
+        <a href="/answers/<%= answer.id %>/comments">Comments</a>
+
+
+    <% end %>
+  </div>
+
+
+
+</div>
