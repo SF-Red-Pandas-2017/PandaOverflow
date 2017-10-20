@@ -22,7 +22,7 @@ post '/comments/:comment_id/votes' do
   if logged_in?
     @comment = Comment.find(params[:comment_id])
     @comment.votes << Vote.new(vote_value: params[:vote_input].to_i, judge_id: current_user)
-    redirect "/#{@comment.commentable.commentable_type}/#{@comment.commentable.id}"
+    redirect "/#{@comment.commentable_type.downcase}s/#{@comment.commentable.id}/comments"
   else
     redirect 'sessions/new'
   end

@@ -16,8 +16,14 @@
     </div>
     <p class="question_body"> <%= @question.question_body %></p><br>
     <a href="/questions/<%= @question.id %>/comments">Comments</a>
+
     <br><br>
+</div>
+
     <h1>Answers</h1>
+
+    <a href="/questions/<%= @question.id %>/answers/new">Add answer</a>
+
 
     <div class="answers_container">
       <ul>
@@ -39,4 +45,5 @@
     </ul>
   </div>
 
-</div>
+
+
