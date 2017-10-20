@@ -2,6 +2,32 @@ body {
   background-image: url("plain-wallpaper2.jpg");
 }
 
+.topnav {
+  background-color: #00BFFF;
+  background: rgba(175, 238, 238, 0.2);
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 .form {
   width: 360px;
   padding: 8% 0 0;
@@ -49,4 +75,35 @@ button {
 .message a {
   color: #00BFFF;
   text-decoration: none
+}
+
+a {
+  color: #B0C4DE;
+  text-decoration: none
+}
+
+#username {
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 70px;
+}
+
+.container {
+  margin: auto;
+  width: 1000px;
+  background-color: #AFEEEE;
+  background: rgba(175, 238, 238, 0.2);
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  color: #b3ecff;
+}
+
+.answers_container, .questions_container {
+  font-family: "Roboto", sans-serif;
+  color: #B0C4DE;
+  padding: 20px;
 }
