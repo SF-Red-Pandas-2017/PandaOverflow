@@ -18,13 +18,19 @@
   <title></title>
 </head>
 <body>
-  <a href="/">Home</a>
-  <% if logged_in? %>
-    <a href="/logout">Logout</a>
-  <% else %>
-    <a href="/sessions/new">Login</a>
-    <a href="/users/new">Register</a>
-  <% end %>
+  <div class="topnav">
+    <a href="/"><b>PandaOverflow</b></a>
+    <% if logged_in? %>
+      <a href="/logout">Logout</a>
+    <% else %>
+      <a href="/sessions/new">Login</a>
+      <a href="/users/new">Register</a>
+    <% end %>
+    <a href="/">Questions</a>
+    <a href="/">Developer Jobs</a>
+    <a href="/">Tags</a>
+    <a href="/">Users</a>
+  </div>
 
   <%= erb :'_errors' %>
   <%= yield %>
