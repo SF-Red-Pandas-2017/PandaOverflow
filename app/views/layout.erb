@@ -21,6 +21,7 @@
   <div class="topnav">
     <a href="/"><b>PandaOverflow</b></a>
     <% if logged_in? %>
+      <a href="/users/<%= current_user.id %>">Profile</a>
       <a href="/logout">Logout</a>
     <% else %>
       <a href="/sessions/new">Login</a>

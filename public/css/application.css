@@ -123,7 +123,7 @@ h3 {
   color: #b3ecff;
 }
 
-td, ul, li, .find_users, .question_body, span {
+td, ul, li, .find_users, .question_body, span, .commentable_description {
   font-family: "Roboto", sans-serif;
   color: #b3ecff;
 }
