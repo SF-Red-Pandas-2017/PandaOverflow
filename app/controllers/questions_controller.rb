@@ -12,8 +12,13 @@ get '/questions/new' do
 end
 
 post '/questions' do
-  current_user.questions << Question.new(params[:question])
-  redirect "/questions"
+  if logged_in?
+    current_user.questions << Question.new(params[:question])
+    redirect "/questions"
+  else
+    @errors = ["You need to be logged in to post a question."]
+    erb :'sessions/new'
+  end
 end
 
 get '/questions/:id' do

@@ -5,7 +5,7 @@
   <h3>Answers:</h3>
     <ul>
       <% @user.answers.each do |answer| %>
-        <dt><%= answer.answer_body %></dt><br>
+        <dt><%= answer.question.title %>? - <%= answer.answer_body %></dt>
       <% end %>
     </ul>
   </div>
