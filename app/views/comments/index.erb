@@ -1,4 +1,9 @@
-
+<%= @comments.first.commentable_type %> -
+<% if  @comments.first.commentable_type == "Question"%>
+<%= @comments.first.commentable.question_body %>
+<% else %>
+<%= @comments.first.commentable.answer_body %>
+<% end %>
 <ul>
 <% @comments.each do |comment| %>
   <li><%= comment.comment_body %></li>
