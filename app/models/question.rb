@@ -7,4 +7,8 @@ class Question < ActiveRecord::Base
 
   include VoteCountable
 
+  def total_answers
+    self.answers.count
+  end
+
 end
