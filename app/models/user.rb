@@ -2,6 +2,7 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   # users.password_hash in the database is a :string
+  validates :username, presence: true, uniqueness: true
 
   has_many :answers, foreign_key: :author_id
   has_many :questions, foreign_key: :author_id
