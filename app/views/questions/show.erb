@@ -1,36 +1,36 @@
 <div class="question_container">
   <h1> <%= @question.title %></h1>
     <div class="votes_container">
-      <form action="question/<%= @question.id %>/votes" method="post">
-        <button name="up_vote" type="submit" value="1">+</button>
+      <form action="/questions/<%= @question.id %>/votes" method="post">
+        <button name="vote_input" type="submit" value="1">+</button>
       </form>
-      <form action="question/<%= @question.id %>/votes" method="post">
-        <button name="down_vote" type="submit" value="-1">-</button>
+      <form action="/questions/<%= @question.id %>/votes" method="post">
+        <button name="vote_input" type="submit" value="-1">-</button>
         <span>votes: <%= @question.object_votes %></span>
       </form>
     </div>
     <h2> <%= @question.question_body %></h2>
     <a href="/questions/<%= @question.id %>/comments">Comments</a>
 
+    <h2>Answers</h2>
+
     <div class="answers_container">
       <ul>
       <% @question.answers.each do |answer| %>
-        <li> <%= answer %> </li>
+        <li> <%= answer.answer_body %> </li>
         <!-- possible to create a partial here -->
         <div class="votes_container">
-            <form action="answers/<%= answer.id %>/votes" method="post">
-              <button name="up_vote" type="submit" value="1">+</button>
+            <form action="/answers/<%= answer.id %>/votes" method="post">
+              <button name="vote_input" type="submit" value="1">+</button>
             </form>
-            <form action="answers/<%= @answer.id %>/votes" method="post">
-              <button name="down_vote" type="submit" value="-1">-</button>
-              <span>votes: <%= @answer.object_votes %></span>
+            <form action="/answers/<%= answer.id %>/votes" method="post">
+              <button name="vote_input" type="submit" value="-1">-</button>
+              <span>votes: <%= answer.object_votes %></span>
             </form>
         </div>
         <a href="/answers/<%= answer.id %>/comments">Comments</a>
     <% end %>
     </ul>
   </div>
-
-
 
 </div>
