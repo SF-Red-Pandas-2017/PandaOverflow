@@ -1,0 +1,15 @@
+<br><br>
+<h1>Questions</h1>
+
+<ul>
+<% @questions.each do |question| %>
+  <li><a href="questions/<%= question.id %>"><%= question.title %></a></li>
+  <span>votes: <%= question.object_votes %></span>
+  <span>answers: <%= question.total_answers %></span>
+  <br><br>
+<% end %>
+</ul>
+
+<div class="adding_question_container">
+  <a class="add_question" href="/questions/new">Add question</a>
+</div>

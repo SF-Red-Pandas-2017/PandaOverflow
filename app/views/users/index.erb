@@ -1,0 +1,12 @@
+<br><br>
+<h1>Users</h1>
+
+<td><p class="find_users">Type to find users:
+  <input id="userfilter" type="text" value="">
+</td></p>
+
+<ul>
+<% @user.each do |user| %>
+  <li><%= user.username %></li><br>
+<% end %>
+</ul>

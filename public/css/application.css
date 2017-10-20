@@ -1,0 +1,150 @@
+body {
+  background-image: url("plain-wallpaper2.jpg");
+  padding: 20px;
+}
+
+.topnav {
+  background-color: #00BFFF;
+  background: rgba(175, 238, 238, 0.2);
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+#login_form, #signup_form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+input[type=text], input[type=password] {
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.votes_container {
+  display: flex;
+}
+
+.vote_buttons {
+  background: #00BFFF;
+  position: relative;
+  display: inline;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 1rem;
+  border-radius: 50%;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #00BFFF;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.message a {
+  color: #00BFFF;
+  text-decoration: none
+}
+
+a {
+  color: #B0C4DE;
+  text-decoration: none
+}
+
+#username {
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 70px;
+}
+
+.container {
+  margin: auto;
+  width: 1000px;
+  background-color: #AFEEEE;
+  background: rgba(175, 238, 238, 0.2);
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  color: #b3ecff;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #b3ecff;
+}
+
+td, ul, li, .find_users, .question_body, span, .commentable_description {
+  font-family: "Roboto", sans-serif;
+  color: #b3ecff;
+}
+
+.answers_container, .questions_container {
+  font-family: "Roboto", sans-serif;
+  color: #B0C4DE;
+  padding: 20px;
+}
+
+#userfilter {
+  background-color: #00BFFF;
+  background: rgba(175, 238, 238, 0.2);
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  width: 30%;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #3b4045;
+  border: 0;
+}
