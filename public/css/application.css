@@ -1,5 +1,6 @@
 body {
   background-image: url("plain-wallpaper2.jpg");
+  padding: 20px;
 }
 
 .topnav {
@@ -57,6 +58,20 @@ input[type=text], input[type=password] {
   font-size: 14px;
 }
 
+.votes_container {
+  display: flex;
+}
+
+.vote_buttons {
+  background: #00BFFF;
+  position: relative;
+  display: inline;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 1rem;
+  border-radius: 50%;
+}
+
 button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -96,9 +111,20 @@ a {
   background: rgba(175, 238, 238, 0.2);
 }
 
-h3 {
+h1 {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
+  color: #b3ecff;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #b3ecff;
+}
+
+td, ul, li, .find_users, .question_body, span {
+  font-family: "Roboto", sans-serif;
   color: #b3ecff;
 }
 
@@ -106,4 +132,19 @@ h3 {
   font-family: "Roboto", sans-serif;
   color: #B0C4DE;
   padding: 20px;
+}
+
+#userfilter {
+  background-color: #00BFFF;
+  background: rgba(175, 238, 238, 0.2);
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  width: 30%;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #3b4045;
+  border: 0;
 }
