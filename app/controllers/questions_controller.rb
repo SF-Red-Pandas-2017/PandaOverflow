@@ -4,12 +4,16 @@ get '/questions' do
 end
 
 get '/questions/new' do
-  erb :'questions/new'
+  if request.xhr?
+    erb :'questions/new', layout: false
+  else
+    erb :'questions/new'
+  end
 end
 
 post '/questions' do
   current_user.questions << Question.new(params[:question])
-  redirect "/users/#{current_user.id}"
+  redirect "/questions"
 end
 
 get '/questions/:id' do
