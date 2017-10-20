@@ -1,0 +1,17 @@
+
+<ul>
+<% @comments.each do |comment| %>
+  <li><%= comment.comment_body %></li>
+  <span>- <%= comment.commentable.user.username %></span><br>
+  <div class="votes_container">
+    <form action="/comments/<%= comment.id %>/votes" method="post">
+      <button name="vote_input" type="submit" value="1">+</button>
+    </form>
+    <form action="/comments/<%= comment.id %>/votes" method="post">
+      <button name="vote_input" type="submit" value="-1">-</button>
+      <span>votes: <%= comment.object_votes %></span>
+    </form>
+  </div>
+
+<% end %>
+</ul>

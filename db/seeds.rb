@@ -11,6 +11,10 @@ User.all.each do |user|
   user.questions.first.answers << Answer.new({answer_body: "Not much"})
 end
 
+Question.all.each do |question|
+  question.comments << Comment.new({comment_body: "Good question!"})
+end
+
 
 
 
