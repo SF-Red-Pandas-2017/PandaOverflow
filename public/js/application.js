@@ -1,11 +1,8 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-  questionForm()
-  answerForm()
+  questionForm();
+  answerForm();
+  votesForm();
 });
 
 var questionForm = function() {
@@ -36,6 +33,29 @@ var answerForm = function() {
       url: url
     }).done(function( response ) {
       $(".add_answer_container").append(response);
-    })
-  })
-}
+    });
+  });
+};
+
+var votesForm = function() {
+  $(".vote_buttons").on("click", function(event) {
+    event.preventDefault();
+
+    var $currentVotesForm = $(this).parent();
+
+    var url = $currentVotesForm.attr('action');
+    console.log(url)
+    var method = $currentVotesForm.attr('method');
+    console.log(method)
+    var data = $(this).attr('value');
+    console.log(data)
+
+    $.ajax({
+      url: url,
+      method: method,
+      data: {vote_input: data},
+    }).done(function(response){
+        $currentVotesForm.parent().find('.vote_count').text("votes: "+response);
+    });
+  });
+};
