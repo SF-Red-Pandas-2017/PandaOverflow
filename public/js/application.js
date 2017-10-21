@@ -5,6 +5,7 @@ $(document).ready(function() {
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   questionForm()
+  answerForm()
 });
 
 var questionForm = function() {
@@ -19,6 +20,22 @@ var questionForm = function() {
       url: url
     }).done(function( response ) {
       $(".adding_question_container").append(response);
+    })
+  })
+}
+
+var answerForm = function() {
+  $(".post_answer").on("click", function(event) {
+    event.preventDefault()
+
+    var url = $(this).attr("href")
+
+    $(this).hide();
+
+    $.ajax({
+      url: url
+    }).done(function( response ) {
+      $(".add_answer_container").append(response);
     })
   })
 }
