@@ -1,6 +1,10 @@
 get '/questions/:question_id/answers/new' do
   @question = Question.find(params[:question_id])
-  erb :'answers/new'
+  if request.xhr?
+    erb :'answers/new', layout: false
+  else
+    erb :'answers/new'
+  end
 end
 
 post '/questions/:question_id/answers' do

@@ -16,6 +16,7 @@ question3 = user3.questions.create!({title: "Red Panda Danger", question_body: "
 question4 = user4.questions.create!({title: "Red Panda Reproduction", question_body: "how does the red panda reproduce?"})
 question5 = user1.questions.create!({title: "Red Panda Family", question_body: "Which animals are related to the red pandas?"})
 
+
 answer1 = user2.answers.create!({question_id: question1.id, answer_body: "The Red Panda is the only species of its kind in the world... These Pandas eat bamboo, insects, eggs, fruit, leaves and plants. Red Pandas control the growth and population of these animals and species. Red Pandas play an important role in the ecosystem and it would be a great loss if they became extinct."})
 answer2 = user1.answers.create!({question_id: question2.id, answer_body: "Food. The red panda's diet is very unusual for a mammal and consists mostly of bamboo. When the weather is warm enough, they also eat insects and fruit. Although the giant panda eats almost every part of the bamboo plant (except the roots), the red panda only eats the youngest, most tender shoots and leaves."})
 answer3 = user3.answers.create!({question_id: question2.id, answer_body: "Correct me if I am wrong, but I am pretty sure red pandas love love love pizza! Especially, the pepperoni kind! They also love to snack on whatever sugary treats Jameson brings in for the day."})
@@ -27,4 +28,7 @@ answer8 = user3.answers.create!({question_id: question5.id, answer_body: "Curren
 
 
 question1.comments.create!({comment_body: "Good question!"})
+question2.comments.create!({comment_body: "Good question!"})
+question3.comments.create!({comment_body: "Good question!"})
 answer1.comments.create!({comment_body: "Wow! This is great! Thank you so much. I learned a new fact about red pandas"})
+answer3.comments.create!({comment_body: "Wow! This is so helpful! I did not know red pandas love to eat Jameson's snacks!"})
