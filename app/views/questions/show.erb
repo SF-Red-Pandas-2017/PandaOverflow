@@ -3,17 +3,14 @@
   <h3><%= @question.title %></h3>
     <div class="votes_container">
       <form action="/questions/<%= @question.id %>/votes" method="post">
-
         <button class="vote_buttons" name="vote_input" type="submit" value="1">+</button>
-
       </form>
       <form action="/questions/<%= @question.id %>/votes" method="post">
-
         <button class="vote_buttons" name="vote_input" type="submit" value="-1">-</button>
-
-        <span>votes: <%= @question.object_votes %></span>
       </form>
+      <span class="vote_count">votes: <%= @question.object_votes %></span>
     </div>
+
     <p class="question_body"> <%= @question.question_body %></p><br>
     <a href="/questions/<%= @question.id %>/comments">Comments</a>
 
@@ -31,19 +28,16 @@
         <li> <%= answer.answer_body %> </li>
         <!-- possible to create a partial here -->
         <div class="votes_container">
-            <form action="/answers/<%= answer.id %>/votes" method="post">
-              <button class="vote_buttons" name="vote_input" type="submit" value="1">+</button>
-            </form>
-            <form action="/answers/<%= answer.id %>/votes" method="post">
-              <button class="vote_buttons" name="vote_input" type="submit" value="-1">-</button>
-              <span>votes: <%= answer.object_votes %></span>
-            </form>
+          <form action="/answers/<%= answer.id %>/votes" method="post">
+            <button class="vote_buttons" name="vote_input" type="submit" value="1">+</button>
+          </form>
+          <form action="/answers/<%= answer.id %>/votes" method="post">
+            <button class="vote_buttons" name="vote_input" type="submit" value="-1">-</button>
+          </form>
+          <span class="vote_count">votes: <%= answer.object_votes %></span>
         </div>
         <a href="/answers/<%= answer.id %>/comments">Comments</a>
         <br><br>
     <% end %>
     </ul>
   </div>
-
-
-

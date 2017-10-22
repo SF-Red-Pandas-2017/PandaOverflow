@@ -148,3 +148,7 @@ td, ul, li, .find_users, .question_body, span, .commentable_description {
   color: #3b4045;
   border: 0;
 }
+
+.vote_count {
+  margin-top: 25px;
+}
