@@ -18,8 +18,8 @@
     </form>
     <form action="/comments/<%= comment.id %>/votes" method="post">
       <button class="vote_buttons" name="vote_input" type="submit" value="-1">-</button>
-      <span>votes: <%= comment.object_votes %></span>
     </form>
+    <span class="vote_count">votes: <%= comment.object_votes %></span>
   </div>
 
 <% end %>
