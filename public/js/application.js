@@ -44,18 +44,16 @@ var votesForm = function() {
     var $currentVotesForm = $(this).parent();
 
     var url = $currentVotesForm.attr('action');
-    console.log(url)
     var method = $currentVotesForm.attr('method');
-    console.log(method)
     var data = $(this).attr('value');
-    console.log(data)
+
 
     $.ajax({
       url: url,
       method: method,
       data: {vote_input: data},
     }).done(function(response){
-        $currentVotesForm.parent().find('.vote_count').text("votes: "+response);
+      $currentVotesForm.parent().find('.vote_count').text("votes: "+response);
     });
   });
 };
